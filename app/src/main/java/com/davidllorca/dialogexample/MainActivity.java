@@ -3,6 +3,7 @@ package com.davidllorca.dialogexample;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,23 @@ public class MainActivity extends Activity {
 
     public void onClick(View view) {
         showDialog(0);
+    }
+
+    public void onClick2(View view){
+        final ProgressDialog progressDialog = ProgressDialog.show(this,"Loading", "Please wait...", true);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    // Simulate waiting
+                    Thread.sleep(5000);
+                    // Close dialog
+                    progressDialog.dismiss();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     @Override
