@@ -13,7 +13,34 @@
         android:id="@+id/btn_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click to display a dialog"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:text="Click to display a dialog" />
 
+    <Button
+        android:id="@+id/btn_dialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick2"
+        android:text="Click to display a progress dialog" />
+
+    <Button
+        android:id="@+id/btn_dialog3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick3"
+        android:text="Click to display a detailed progress dialog" />
+
+    <Button
+        android:id="@+id/btn_dialog4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick4"
+        android:text="Click to display a Timepicker dialog" />
+
+    <Button
+        android:id="@+id/btn_dialog5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick5"
+        android:text="Click to display DialogFragment" />
 </LinearLayout>
